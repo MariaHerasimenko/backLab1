@@ -1,0 +1,155 @@
+{
+  "info":{
+    "_postman_id":"8760c377-bd46-4faa-b5f5-17bebff4b37f",
+    "name":"BackLab1",
+    "schema":"https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item":[
+    {
+      "name":"Get categories",
+      "id":"7baec7db-0a2e-4519-92bc-8afde62b4461",
+      "request":{
+        "method":"GET",
+        "header":[
+
+        ],
+        "url":"http://{{domain}}/api/category"
+      },
+      "response":[
+
+      ]
+    },
+    {
+      "name":"Create category",
+      "id":"a46bda4a-b871-4436-877b-78d2fcdf0690",
+      "request":{
+        "method":"POST",
+        "header":[
+
+        ],
+        "body":{
+          "mode":"raw",
+          "raw":"{\r\n    \r\n    \"name\":\"null\"\r\n}",
+          "options":{
+            "raw":{
+              "language":"json"
+            }
+          }
+        },
+        "url":"http://{{domain}}/api/category"
+      },
+      "response":[
+
+      ]
+    },
+    {
+      "name":"Get records",
+      "id":"844f2285-8924-46ce-8643-bdf5d8908f53",
+      "request":{
+        "method":"GET",
+        "header":[
+
+        ],
+        "url":{
+          "raw":"http://{{domain}}/api/record?customerId=377311820",
+          "protocol":"http",
+          "host":[
+            "{{domain}}"
+          ],
+          "path":[
+            "api",
+            "v1",
+            "record"
+          ],
+          "query":[
+            {
+              "key":"customerId",
+              "value":"377311820"
+            }
+          ]
+        }
+      },
+      "response":[
+
+      ]
+    },
+    {
+      "name":"Get category records",
+      "id":"dc71cd82-4827-4ee1-a695-752327ae7b00",
+      "request":{
+        "method":"GET",
+        "header":[
+
+        ],
+        "url":{
+          "raw":"http://{{domain}}/api/record/1079463048?customerId=377311820",
+          "protocol":"http",
+          "host":[
+            "{{domain}}"
+          ],
+          "path":[
+            "api",
+            "v1",
+            "record",
+            "1079463048"
+          ],
+          "query":[
+            {
+              "key":"customerId",
+              "value":"377311820"
+            }
+          ]
+        }
+      },
+      "response":[
+
+      ]
+    },
+    {
+      "name":"Create user",
+      "id":"992ecc14-c85d-4258-9d89-87f57aae4a8c",
+      "request":{
+        "method":"POST",
+        "header":[
+
+        ],
+        "body":{
+          "mode":"raw",
+          "raw":"{\r\n    \"id\":1,\r\n    \"name\":\"Oojimdg\"\r\n}",
+          "options":{
+            "raw":{
+              "language":"json"
+            }
+          }
+        },
+        "url":"http://{{domain}}/api/customer"
+      },
+      "response":[
+
+      ]
+    },
+    {
+      "name":"Create record",
+      "id":"9eb8740b-44a0-4797-9fa5-a1b3c0c3bd98",
+      "request":{
+        "method":"POST",
+        "header":[
+
+        ],
+        "body":{
+          "mode":"raw",
+          "raw":"{\r\n    \"id\":4,\r\n    \"userId\":377311820,\r\n    \"categoryId\":3392962,\r\n    \"creationTime\":\"2019-02-05T16:45:42.01Z\",\r\n    \"money\": {\"amount\":\"100.00\",\"currency\":\"EUR\"}\r\n}",
+          "options":{
+            "raw":{
+              "language":"json"
+            }
+          }
+        },
+        "url":"http://{{domain}}/api/record"
+      },
+      "response":[
+
+      ]
+    }
+  ]
+}
